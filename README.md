@@ -14,5 +14,6 @@ Got basic movement to work with the simplest animgraph I could build from scratc
 #### basic animgraph for citizen movement
 ![image](https://user-images.githubusercontent.com/7261234/194384710-5edc3339-b8a0-4830-80f2-1eb509a91834.png)
 ##### final result + basic attack
-![image](https://user-images.githubusercontent.com/7261234/194384364-3a8e8bfc-9aab-4e37-801e-0fbf1e87708a.png)
+![sbox_move_anim](https://user-images.githubusercontent.com/7261234/194384881-92f6f3f2-b5cb-434e-8b38-129b7571547d.gif)
+
 
