@@ -1,6 +1,9 @@
-# sbox-mazing
-Explore a dangerous labyrinth for treasure.
-Vault over walls to outsmart your enemies.
-Escape with gems to bank $ for your team of mazers.
+# sbox-citizen-warrior
 
-Made for Facepunch Hackweek in August 2022
+Very early stages
+
+I intend to add many sword fighting features and have a general combat system (with combos) for simple a top-down view game
+
+Current stage includes a citizen model with an animgraph created from scratch to only support anims I need
+
+So far I have basic walking/running anims synchronized with player movement + simple attacking
