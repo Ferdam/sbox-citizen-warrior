@@ -1,0 +1,861 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "AnimConstraintList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_animconstraintlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						note = "We\'re working in centimeters at the source (which makes more sense for us), and then letting the engine take care of the conversion to inches at this step. So if you want to create something for the Citizen (like clothing), you should also model it in centimeters (matching the provided source files), and use a ScaleAndMirror modifier at 0.3937."
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						note = "These skins are now here only for preview purposes. Your gamemode should be using citizen.SetMaterialOverride"
+						target_file = "models/citizen/prefabs/citizen_materialgrouplist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_rendermeshlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_animationlist.vmdl_prefab"
+					},
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_animationlist_unicycle.vmdl_prefab"
+					},
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_animationlist_debug.vmdl_prefab"
+					},
+					{
+						_class = "Folder"
+						name = "CW_Anims"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Combo_01"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Alert_01"
+								children = 
+								[
+									{
+										_class = "AnimAddLayer"
+										anim_name = "CW_Sword_Idle_Alert_01_lower"
+									},
+									{
+										_class = "AnimSmoothLoop"
+										frames_from_start = 1
+										frames_from_end = 1
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Remove_Legs"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 8
+								end_frame = 10
+								framerate = 1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Alert_01_upper"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Remove_Feet_Blend"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 5
+								end_frame = 15
+								framerate = 5.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Alert_01_lower"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Only_Legs_100Pelvis"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 10
+								end_frame = 10
+								framerate = 5.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Alert_01_full"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 5
+								end_frame = 15
+								framerate = 5.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Combo_01_upper"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Blend_UpperBody"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Relax_01"
+								children = 
+								[
+									{
+										_class = "AnimAddLayer"
+										anim_name = "CW_Sword_Idle_Relax_01_lower"
+									},
+									{
+										_class = "AnimSmoothLoop"
+										frames_from_start = 1
+										frames_from_end = 1
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Only_UpperBody"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 2
+								end_frame = 4
+								framerate = 1.0
+								take = 0
+								reverse = false
+								anim_hold_list = 
+								[
+									{
+										frame = 4
+										frame_count = 1
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Relax_01_upper"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Blend_UpperBody"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 2
+								end_frame = 4
+								framerate = 3.0
+								take = 0
+								reverse = false
+								anim_hold_list = 
+								[
+									{
+										frame = 4
+										frame_count = 1
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Relax_01_lower"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Remove_Feet_Blend"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 2
+								end_frame = 2
+								framerate = 3.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFrame"
+								name = "CW_Sword_Attack_a_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Remove_Legs"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								src_anim_name = "CW_Sword_Combo_01"
+								frame_type = "Number"
+								frame = 28
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Attack_a_move"
+								children = 
+								[
+									{
+										_class = "Feet"
+										children = 
+										[
+											{
+												_class = "Foot"
+												name = "Left"
+												anklebone = "ankle_L"
+												toebone = "ball_L"
+												balloffset = [ 0.0, 0.0, 0.0 ]
+												heeloffset = [ 0.0, 0.0, 0.0 ]
+												autolevel = true
+												traceheight = 5.0
+												traceradius = 3.0
+											},
+											{
+												_class = "Foot"
+												name = "Right"
+												anklebone = "ankle_R"
+												toebone = "ball_R"
+												balloffset = [ 0.0, 0.0, 0.0 ]
+												heeloffset = [ 0.0, 0.0, 0.0 ]
+												autolevel = true
+												traceheight = 5.0
+												traceradius = 3.0
+											},
+										]
+										locktolerance = 0.6
+										heighttolerance = 2.0
+										sanitizetrajectories = true
+									},
+									{
+										_class = "IKLock"
+										chain_name = "left_leg_IK"
+										start_frame = 23
+										tail_frame = 25
+										end_frame = 25
+										create_footstep_anim_event = true
+										walktorunspeeddetermination = "Auto"
+										overridewalktorunspeed = -1.0
+									},
+									{
+										_class = "IKLock"
+										chain_name = "right_leg_IK"
+										start_frame = 0
+										tail_frame = 23
+										end_frame = 23
+										create_footstep_anim_event = false
+										walktorunspeeddetermination = "Auto"
+										overridewalktorunspeed = -1.0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.1
+								fade_out_time = 0.1
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 9
+								end_frame = 34
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Attack_a_move_smooth"
+								children = 
+								[
+									{
+										_class = "AnimSmoothLoop"
+										frames_from_start = 0
+										frames_from_end = 8
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.1
+								fade_out_time = 0.1
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 9
+								end_frame = 34
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+				]
+				default_root_bone_name = "pelvis"
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_bonemarkuplist.vmdl_prefab"
+					},
+				]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_attachmentlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_physicsjointlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_physicsshapelist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_hitboxsetlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "IKData"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_ikdata.vmdl_prefab"
+					},
+					{
+						_class = "Folder"
+						name = "CW_IKs"
+						children = 
+						[
+							{
+								_class = "IKChain"
+								name = "right_leg_IK1"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "leg_upper_R1"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "leg_lower_R1"
+												children = 
+												[
+													{
+														_class = "IKChainJoint"
+														name = "ankle_R1"
+														children = 
+														[
+															{
+																_class = "IKJointConstraint_Hinge"
+																constrained_joint = ""
+																hinge_axis = "Up"
+																min_radians = -2.094395
+																max_radians = 0.0
+															},
+														]
+														bone = "ankle_R"
+													},
+												]
+												bone = "leg_lower_R"
+											},
+										]
+										bone = "leg_upper_R"
+									},
+								]
+								m_bDoBonesOrientAlongPositiveX = true
+								"m_DefaultSolverSettings.m_nNumIterations" = 6
+								"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_TwoBone"
+								"m_DefaultTargetSettings.m_Bone" = 
+								{
+									m_Name = "ball_R"
+								}
+								"m_DefaultTargetSettings.m_TargetSource" = "Bone"
+								"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+								{
+									m_id = 4294967295
+								}
+								"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+								{
+									m_Name = ""
+								}
+								"m_Data.m_bParentJointRequiresAlignment" = true
+							},
+							{
+								_class = "IKChain"
+								name = "left_leg_IK1"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "leg_upper_L1"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "leg_lower_L1"
+												children = 
+												[
+													{
+														_class = "IKChainJoint"
+														name = "ankle_L1"
+														children = 
+														[
+															{
+																_class = "IKJointConstraint_Hinge"
+																constrained_joint = ""
+																hinge_axis = "Up"
+																min_radians = -2.094395
+																max_radians = 0.0
+															},
+														]
+														bone = "ankle_L"
+													},
+												]
+												bone = "leg_lower_L"
+											},
+										]
+										bone = "leg_upper_L"
+									},
+								]
+								m_bDoBonesOrientAlongPositiveX = true
+								"m_DefaultSolverSettings.m_nNumIterations" = 6
+								"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_TwoBone"
+								"m_DefaultTargetSettings.m_Bone" = 
+								{
+									m_Name = "ball_L"
+								}
+								"m_DefaultTargetSettings.m_TargetSource" = "Bone"
+								"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+								{
+									m_id = 4294967295
+								}
+								"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+								{
+									m_Name = ""
+								}
+								"m_Data.m_bParentJointRequiresAlignment" = true
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PoseParamList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_poseparamlist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "WeightListList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_weightlistlist.vmdl_prefab"
+					},
+					{
+						_class = "Folder"
+						name = "CW_Blends"
+						children = 
+						[
+							{
+								_class = "WeightList"
+								name = "Only_Legs_50Pelvis"
+								default_weight = 0.0
+								weights = 
+								[
+									{
+										bone = "leg_upper_L"
+										weight = 1.0
+									},
+									{
+										bone = "leg_upper_R"
+										weight = 1.0
+									},
+									{
+										bone = "pelvis"
+										weight = 0.495575
+									},
+									{
+										bone = "spine_0"
+										weight = 0.0
+									},
+								]
+								master_morph_weight = -1.0
+								morph_weights = [  ]
+							},
+							{
+								_class = "WeightList"
+								name = "Only_Arms"
+								default_weight = 0.0
+								weights = 
+								[
+									{
+										bone = "arm_elbow_helper_L"
+										weight = 0.0
+									},
+									{
+										bone = "arm_elbow_helper_R"
+										weight = 0.0
+									},
+									{
+										bone = "arm_lower_L_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_lower_R_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_upper_L"
+										weight = 1.0
+									},
+									{
+										bone = "arm_upper_L_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_upper_R"
+										weight = 1.0
+									},
+									{
+										bone = "arm_upper_R_twist"
+										weight = 0.0
+									},
+									{
+										bone = "clavicle_L"
+										weight = 0.0
+									},
+									{
+										bone = "clavicle_R"
+										weight = 0.0
+									},
+									{
+										bone = "hand_L_IK_target"
+										weight = 1.0
+									},
+									{
+										bone = "hand_R_IK_target"
+										weight = 1.0
+									},
+									{
+										bone = "neck_0"
+										weight = 0.0
+									},
+									{
+										bone = "spine_0"
+										weight = 0.0
+									},
+									{
+										bone = "spine_1"
+										weight = 0.0
+									},
+									{
+										bone = "spine_2"
+										weight = 0.0
+									},
+								]
+								master_morph_weight = -1.0
+								morph_weights = [  ]
+							},
+							{
+								_class = "WeightList"
+								name = "Remove_Feet_Blend"
+								default_weight = 0.0
+								weights = 
+								[
+									{
+										bone = "ankle_L"
+										weight = 0.0
+									},
+									{
+										bone = "ankle_R"
+										weight = 0.0
+									},
+									{
+										bone = "ball_L"
+										weight = 0.0
+									},
+									{
+										bone = "ball_R"
+										weight = 0.0
+									},
+									{
+										bone = "leg_lower_L"
+										weight = 0.313559
+									},
+									{
+										bone = "leg_lower_R"
+										weight = 0.313559
+									},
+									{
+										bone = "leg_upper_L"
+										weight = 0.694915
+									},
+									{
+										bone = "leg_upper_R"
+										weight = 0.694915
+									},
+									{
+										bone = "pelvis"
+										weight = 0.966102
+									},
+									{
+										bone = "spine_0"
+										weight = 1.0
+									},
+								]
+								master_morph_weight = -1.0
+								morph_weights = [  ]
+							},
+							{
+								_class = "WeightList"
+								name = "Only_Legs_100Pelvis"
+								default_weight = 0.0
+								weights = 
+								[
+									{
+										bone = "leg_upper_L"
+										weight = 1.0
+									},
+									{
+										bone = "leg_upper_R"
+										weight = 1.0
+									},
+									{
+										bone = "pelvis"
+										weight = 1.0
+									},
+									{
+										bone = "spine_0"
+										weight = 0.0
+									},
+								]
+								master_morph_weight = -1.0
+								morph_weights = [  ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_gamedatalist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_bodygrouplist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_lodgrouplist.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "ClothShapeList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_clothshapelist_lower.vmdl_prefab"
+					},
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/citizen_clothshapelist_upper.vmdl_prefab"
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = "models/citizen/citizenwarrior_sword_only_01.vanmgrph"
+		base_model_name = ""
+	}
+}

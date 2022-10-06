@@ -1,0 +1,58 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "complex.vfx"
+
+	//---- Detail Texture ----
+	F_DETAIL_TEXTURE 2 // Overlay
+
+	//---- PBR ----
+	F_METALNESS_TEXTURE 1
+	F_SPECULAR 1
+
+	//---- Ambient Occlusion ----
+	g_flAmbientOcclusionDirectDiffuse "0.000"
+	g_flAmbientOcclusionDirectSpecular "0.000"
+	TextureAmbientOcclusion "external/Sword_Base_Metal_Ambient Occlusion.TGA"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "external/Sword_Base_Metal_Base Color.TGA"
+
+	//---- Detail Texture ----
+	g_flDetailBlendFactor "0.347"
+	g_flDetailBlendToFull "0.000"
+	g_flDetailTexCoordRotation "0.000"
+	g_vDetailTexCoordOffset "[0.000 0.000]"
+	g_vDetailTexCoordScale "[1.000 1.000]"
+	TextureDetail "external/Sword_Base_Metal_Diffuse.TGA"
+	TextureDetailMask "materials/default/default_detailmask.tga"
+
+	//---- Fade ----
+	g_flFadeExponent "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Metalness ----
+	TextureMetalness "external/Sword_Base_Metal_Metallic.TGA"
+
+	//---- Normal ----
+	TextureNormal "external/Sword_Base_Metal_Normal.TGA"
+
+	//---- Roughness ----
+	TextureRoughness "external/Sword_Base_Metal_Roughness.TGA"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+}

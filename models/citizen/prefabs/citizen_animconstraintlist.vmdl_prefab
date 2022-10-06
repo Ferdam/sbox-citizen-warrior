@@ -1,0 +1,306 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "AnimConstraintList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						name = "ConstraintArms"
+						children = 
+						[
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "ShoulderToBicep_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "arm_upper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_upper_R_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -0.6
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "ShoulderToBicep_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "arm_upper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_upper_L_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -0.6
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "ForearmToWrist_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "hand_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_lower_R_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 0.65
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "ForearmToWrist_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "hand_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_lower_L_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 0.65
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintOrient"
+								name = "elbow_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "arm_upper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, -81.464996, 0.0 ]
+										weight = -0.5
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_elbow_helper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -1.0
+									},
+								]
+							},
+							{
+								_class = "AnimConstraintOrient"
+								name = "elbow_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "arm_upper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, -81.464996, 0.0 ]
+										weight = -0.5
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_elbow_helper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -1.0
+									},
+								]
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "ConstraintLegs"
+						children = 
+						[
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "PelvisToThigh_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "leg_upper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 180.0, 180.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_upper_R_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -0.5
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "PelvisToThigh_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "leg_upper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 180.0, 180.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_upper_L_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -0.5
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "CalfToFoot_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "ankle_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_lower_R_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 0.6
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintTiltTwist"
+								name = "CalfToFoot_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "ankle_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_lower_L_twist"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 0.6
+									},
+								]
+								input_axis = 0
+								slave_axis = 0
+							},
+							{
+								_class = "AnimConstraintOrient"
+								name = "kneecap_R"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "leg_upper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 88.949997, 0.0 ]
+										weight = -0.5
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_knee_helper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -1.0
+									},
+								]
+							},
+							{
+								_class = "AnimConstraintOrient"
+								name = "kneecap_L"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "leg_upper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 88.949997, 0.0 ]
+										weight = -0.5
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "leg_knee_helper_L"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -1.0
+									},
+								]
+							},
+						]
+					},
+					{
+						_class = "Prefab"
+						target_file = "models/citizen/prefabs/neck_clothing.vmdl_prefab"
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

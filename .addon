@@ -1,0 +1,27 @@
+{
+  "Title": "Top Down Test",
+  "Type": "game",
+  "Org": "ferdam",
+  "Ident": "topdowntest",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": [],
+  "HasCode": true,
+  "CodePath": "/code/",
+  "RootNamespace": "Mazing",
+  "Metadata": {
+    "MaxPlayers": 8,
+    "MinPlayers": 1,
+    "GameNetworkType": "Multiplayer",
+    "MapSelect": "Unrestricted",
+    "RankType": "Best",
+    "PerMapRanking": false,
+    "LeaderboardType": "Descending",
+    "ProjectTemplate": null,
+    "GameCategory": "Retro",
+    "MapList": [
+      "facepunch.construct"
+    ]
+  }
+}

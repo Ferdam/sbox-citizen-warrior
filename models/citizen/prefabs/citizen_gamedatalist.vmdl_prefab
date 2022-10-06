@@ -1,0 +1,913 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						name = "AmbientOcclusion"
+						children = 
+						[
+							{
+								_class = "Folder"
+								name = "AO_Body"
+								children = 
+								[
+									{
+										_class = "GenericGameData"
+										name = "AO_pelvis"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "pelvis"
+											radius = 11.0
+											point0 = [ 3.5, 0.0, -5.8 ]
+											point1 = [ 3.5, 0.0, 5.8 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_spine_1"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "spine_1"
+											radius = 15.0
+											point0 = [ -5.0, 1.0, 0.0 ]
+											point1 = [ 5.0, 0.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_spine_2"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "spine_2"
+											radius = 15.0
+											point0 = [ 0.0, 0.5, 0.0 ]
+											point1 = [ 10.0, 1.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_head"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "head"
+											radius = 15.0
+											point0 = [ 9.0, 1.5, 0.0 ]
+											point1 = [ 23.0, 0.5, 0.0 ]
+										}
+									},
+								]
+							},
+							{
+								_class = "Folder"
+								name = "AO_Arms"
+								children = 
+								[
+									{
+										_class = "Folder"
+										name = "AO_Fingers"
+										children = 
+										[
+											{
+												_class = "GenericGameData"
+												name = "thumbL"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_0_L"
+													radius = 1.2
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_1_L"
+													radius = 0.9
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_2_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.3, 0.0, 0.1 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "indexL"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_meta_L"
+													radius = 1.3
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 2.2, -0.1, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_0_L"
+													radius = 0.8
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_1_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_2_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "middleL"
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_meta_L"
+													radius = 1.86776
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 2.2, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_0_L"
+													radius = 0.85
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_1_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_2_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "ringL"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_meta_L"
+													radius = 1.4
+													point0 = [ -1.0, 0.1, 0.0 ]
+													point1 = [ 1.7, 0.1, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_0_L"
+													radius = 0.85
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_1_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_2_L"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "thumbR"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_0_R"
+													radius = 1.2
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_1_R"
+													radius = 0.9
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_thumb_2_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.3, 0.0, -0.1 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "indexR"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_meta_R"
+													radius = 1.3
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 2.2, -0.1, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_0_R"
+													radius = 0.8
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_1_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_index_2_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "middleR"
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_meta_R"
+													radius = 1.90478
+													point0 = [ -1.0, 0.0, 0.0 ]
+													point1 = [ 2.2, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_0_R"
+													radius = 0.85
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_1_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_middle_2_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												name = "ringR"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_meta_R"
+													radius = 1.4
+													point0 = [ -1.0, 0.1, 0.0 ]
+													point1 = [ 1.7, 0.1, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_0_R"
+													radius = 0.85
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 2.0, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_1_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.5, 0.0, 0.0 ]
+												}
+											},
+											{
+												_class = "GenericGameData"
+												disabled = true
+												game_class = "ao_proxy_capsule"
+												game_keys = 
+												{
+													bonename = "finger_ring_2_R"
+													radius = 0.7
+													point0 = [ 0.0, 0.0, 0.0 ]
+													point1 = [ 1.0, 0.0, 0.0 ]
+												}
+											},
+										]
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_arm_upper_R"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "arm_upper_R"
+											radius = 4.5
+											point0 = [ 0.0, 0.0, 0.0 ]
+											point1 = [ 23.0, 0.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_arm_lower_R"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "arm_lower_R"
+											radius = 4.0
+											point0 = [ 0.0, 0.0, 0.0 ]
+											point1 = [ 16.0, -0.45, -0.2 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_arm_upper_L"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "arm_upper_L"
+											radius = 4.5
+											point0 = [ 0.0, 0.0, 0.0 ]
+											point1 = [ 23.0, 0.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_arm_lower_L"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "arm_lower_L"
+											radius = 4.0
+											point0 = [ 0.0, 0.0, 0.0 ]
+											point1 = [ 16.0, -0.45, 0.2 ]
+										}
+									},
+								]
+							},
+							{
+								_class = "Folder"
+								name = "AO_Legs"
+								children = 
+								[
+									{
+										_class = "GenericGameData"
+										name = "AO_leg_upper_R"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "leg_upper_R"
+											radius = 4.5
+											point0 = [ 1.0, 0.0, 0.0 ]
+											point1 = [ 32.0, 0.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_leg_lower_R"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "leg_lower_R"
+											radius = 4.5
+											point0 = [ 1.0, 0.0, 0.0 ]
+											point1 = [ 31.5, 0.3, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_ankle_R"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "ankle_R"
+											radius = 4.0
+											point0 = [ 3.5, -3.8, 0.2 ]
+											point1 = [ 5.8, -1.6, 0.5 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_ball_R"
+										disabled = true
+										game_class = "ao_proxy_box"
+										game_keys = 
+										{
+											bonename = "ball_R"
+											dimensions = [ 1.27102, 6.08424, 4.85 ]
+											offset_origin = [ -0.882109, 0.208512, 0.28 ]
+											offset_angles = [ 0.0, 90.0, -0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_leg_upper_L"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "leg_upper_L"
+											radius = 4.5
+											point0 = [ 1.0, 0.0, 0.0 ]
+											point1 = [ 32.0, 0.0, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_leg_lower_L"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "leg_lower_L"
+											radius = 4.5
+											point0 = [ 1.0, 0.0, 0.0 ]
+											point1 = [ 31.5, 0.3, 0.0 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_ankle_L"
+										game_class = "ao_proxy_capsule"
+										game_keys = 
+										{
+											bonename = "ankle_L"
+											radius = 4.0
+											point0 = [ 3.5, -3.8, -0.2 ]
+											point1 = [ 5.8, -1.6, -0.5 ]
+										}
+									},
+									{
+										_class = "GenericGameData"
+										name = "AO_ball_L"
+										disabled = true
+										game_class = "ao_proxy_box"
+										game_keys = 
+										{
+											bonename = "ball_L"
+											dimensions = [ 1.41039, 6.93472, 4.09806 ]
+											offset_origin = [ -1.30734, 0.278196, 0.095972 ]
+											offset_angles = [ 0.0, 90.0, -0.0 ]
+										}
+									},
+								]
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "LookAtChains"
+						children = 
+						[
+							{
+								_class = "LookAtChain"
+								name = "AimChain"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "spine_2"
+											weight = 1.0
+										},
+										{
+											name = "spine_1"
+											weight = 0.7
+										},
+										{
+											name = "spine_0"
+											weight = 0.45
+										},
+										{
+											name = "pelvis"
+											weight = 0.2
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "AimChain_Halved"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "spine_2"
+											weight = 0.5
+										},
+										{
+											name = "spine_1"
+											weight = 0.36
+										},
+										{
+											name = "spine_0"
+											weight = 0.24
+										},
+										{
+											name = "pelvis"
+											weight = 0.12
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "AimChain_Quarter"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "spine_2"
+											weight = 0.2
+										},
+										{
+											name = "spine_1"
+											weight = 0.16
+										},
+										{
+											name = "spine_0"
+											weight = 0.12
+										},
+										{
+											name = "pelvis"
+											weight = 0.08
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "AimChain_NoPelvis"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "spine_2"
+											weight = 1.0
+										},
+										{
+											name = "spine_1"
+											weight = 0.6
+										},
+										{
+											name = "spine_0"
+											weight = 0.3
+										},
+										{
+											name = "pelvis"
+											weight = 0.0
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "AimChain_NoPelvis_25percent"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "spine_2"
+											weight = 0.25
+										},
+										{
+											name = "spine_1"
+											weight = 0.15
+										},
+										{
+											name = "spine_0"
+											weight = 0.1
+										},
+										{
+											name = "pelvis"
+											weight = 0.0
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "LookChain"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "head"
+											weight = 0.6
+										},
+										{
+											name = "neck_0"
+											weight = 0.35
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "LookChain_Halved"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "head"
+											weight = 0.3
+										},
+										{
+											name = "neck_0"
+											weight = 0.15
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "LookChain_LessNeck"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "head"
+											weight = 0.6
+										},
+										{
+											name = "neck_0"
+											weight = 0.15
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "RightHandAim"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "hand_R"
+											weight = 1.0
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "EyeRLookChain"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "eye_R"
+											weight = 1.0
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "EyeLLookChain"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "eye_L"
+											weight = 1.0
+										},
+									]
+								}
+							},
+						]
+					},
+					{
+						_class = "Feet"
+						children = 
+						[
+							{
+								_class = "Foot"
+								name = "right_foot"
+								anklebone = "ankle_R"
+								toebone = "ball_R"
+								balloffset = [ 5.2, 0.0, 0.0 ]
+								heeloffset = [ 1.85, -3.5, 0.2 ]
+								autolevel = true
+								traceheight = 40.0
+								traceradius = 2.0
+							},
+							{
+								_class = "Foot"
+								name = "left_foot"
+								anklebone = "ankle_L"
+								toebone = "ball_L"
+								balloffset = [ 5.2, 0.0, 0.0 ]
+								heeloffset = [ 1.85, -3.5, 0.2 ]
+								autolevel = true
+								traceheight = 40.0
+								traceradius = 2.0
+							},
+							{
+								_class = "SlopeTrace"
+								m_Settings = 
+								{
+									m_vTraceOffset = [ 0.0, 0.0, 10.0 ]
+								}
+							},
+						]
+						locktolerance = 0.6
+						heighttolerance = 2.0
+						sanitizetrajectories = true
+					},
+					{
+						_class = "MovementSettings"
+						movementsettings = 
+						{
+							name = ""
+							speeds = [  ]
+							runspeed = 320.0
+							walkspeed = 150.0
+							maxSpringTension = 100.0
+							springConstant = 10.0
+							useSmoothPaths = true
+							useMotionDamping = false
+							sharpStartAngle = 180.0
+							m_vTraceScale = [ 1.0, 1.0, 1.0 ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

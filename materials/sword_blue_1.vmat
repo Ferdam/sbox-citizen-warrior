@@ -1,0 +1,58 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "complex.vfx"
+
+	//---- Detail Texture ----
+	F_DETAIL_TEXTURE 2 // Overlay
+
+	//---- PBR ----
+	F_METALNESS_TEXTURE 1
+	F_SPECULAR 1
+
+	//---- Ambient Occlusion ----
+	g_flAmbientOcclusionDirectDiffuse "0.000"
+	g_flAmbientOcclusionDirectSpecular "0.000"
+	TextureAmbientOcclusion "external/Copper_Ambient Occlusion.TGA"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[0.117647 0.564706 1.000000 1.000000]"
+	TextureColor "external/Copper_Base Color.TGA"
+
+	//---- Detail Texture ----
+	g_flDetailBlendFactor "0.558"
+	g_flDetailBlendToFull "0.000"
+	g_flDetailTexCoordRotation "0.000"
+	g_vDetailTexCoordOffset "[0.000 0.000]"
+	g_vDetailTexCoordScale "[1.000 1.000]"
+	TextureDetail "external/Copper_Diffuse.TGA"
+	TextureDetailMask "external/copper_glossiness.tga"
+
+	//---- Fade ----
+	g_flFadeExponent "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Metalness ----
+	TextureMetalness "external/Copper_Metallic.TGA"
+
+	//---- Normal ----
+	TextureNormal "external/Copper_Normal.TGA"
+
+	//---- Roughness ----
+	TextureRoughness "external/Copper_Roughness.TGA"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+}
