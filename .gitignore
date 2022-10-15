@@ -14,3 +14,4 @@ launchSettings.json
 
 *.vsnd_c
 external/
+*.log

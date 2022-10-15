@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Sandbox;
 
 partial class SwordLong : CitizenWarriorGame.BaseWeapon
@@ -7,35 +8,77 @@ partial class SwordLong : CitizenWarriorGame.BaseWeapon
 	public float PrimaryAttackDamage = 25.0f;
 	public float SecondaryAttackDamage = 40.0f;
 	public float MeleeAttackRange = 40.0f;
+
+    public List<SwordPoseStance> ComboSequence = new List<SwordPoseStance>
+    {
+        SwordPoseStance.RightStance,
+        SwordPoseStance.LeftStance,
+	};
+
+	public int _comboSequenceIndex = 0;
+	public int ComboSequenceIndex
+	{
+		get { return _comboSequenceIndex; } 
+		set { 
+			_comboSequenceIndex = value % ComboSequence.Count;
+			Log.Info(ComboSequence[_comboSequenceIndex]);
+		}
+	}
 	
 	public override void Spawn()
 	{
 		base.Spawn();
+		(Owner as AnimatedEntity)?.SetAnimParameter( "stance_type", 0 );
 		SetModel( "models/sbox_sword_03.vmdl" );
 	}
 
-	private void Attack( bool leftHand )
+	private void Attack( SwordPoseStance poseStance )
 	{
-		if ( MeleeAttack() )
-		{
-			OnMeleeHit( leftHand );
-		}
-		else
-		{
-			OnMeleeMiss( leftHand );
-		}
-
+		// if (MeleeIsSwinging) return;
+		
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
+		bool hitSuccess = MeleeAttack();
+		// hitSuccess ? OnMeleeHit(poseStance) : OnMeleeMiss(poseStance);
+		(Owner as AnimatedEntity)?.SetAnimParameter( "stance_type", (int)poseStance );
+		ComboSequenceIndex++;
 	}
 
 	public override void AttackPrimary()
 	{
-		Attack( true );
+		Attack( ComboSequence[ComboSequenceIndex] );
 	}
 
 	public override void AttackSecondary()
 	{
-		Attack( false );
+		Attack( ComboSequence[ComboSequenceIndex] );
+	}
+
+	private bool MeleeAttack() {
+		Log.Info("swingCounter " + swingCounter);
+		if (MeleeIsSwinging) {
+			return false;
+		}
+		_counterMaxValue = 150;
+		meleeSwingOffset = -120;
+		swingCounter = 0;
+		MeleeIsSwinging = true;
+		return true;
+	}
+
+	[ClientRpc]
+	private void OnMeleeMiss( SwordPoseStance poseStance )
+	{
+		Host.AssertClient();
+
+		(Owner as AnimatedEntity)?.SetAnimParameter( "attack_has_hit", false );
+	}
+
+	[ClientRpc]
+	private void OnMeleeHit( SwordPoseStance poseStance )
+	{
+		Host.AssertClient();
+
+		(Owner as AnimatedEntity)?.SetAnimParameter( "attack_has_hit", true );
 	}
 
 	public override void OnCarryDrop( Entity dropper )
@@ -44,6 +87,18 @@ partial class SwordLong : CitizenWarriorGame.BaseWeapon
 
 	public override void SimulateAnimator( CWAnimationHelper anim )
 	{
+		AnimatedEntity playerModelAnim = Owner as AnimatedEntity;		
+		var player = (CitizenWarriorPlayer) Owner;
+		var playerController = (TopDownController) player.Controller;
+
+		if (playerModelAnim != null) {
+			if (playerModelAnim?.RootMotion != new Vector3(0,0,0)) {
+				Log.Info("RootMotion: " + playerModelAnim?.RootMotion);
+				
+				var initialPos = playerController.Position;
+				player.Position += playerModelAnim.RootMotion.Normal * player.Rotation;
+			}
+		}
 		anim.HoldType = CWAnimationHelper.HoldTypes.Swing;
 		anim.Handedness = CWAnimationHelper.Hand.Right;
 		anim.AimBodyWeight = 1.0f;
@@ -68,6 +123,26 @@ partial class SwordLong : CitizenWarriorGame.BaseWeapon
 		var holdBone = playerModel.GetBoneTransform("hold_R", true);
 		new Rotation();
 		this.SetParent(Owner, "hold_R", new Transform(new Vector3(-3.4f,0.1f,-8), new Rotation().Forward.EulerAngles.WithYaw(150).ToRotation()));
+		
+		AnimatedEntity playerModelAnim = Owner as AnimatedEntity;		
+		
+		var playerController = (TopDownController) player.Controller;
+		if (playerModelAnim != null) {
+			if (playerModelAnim?.RootMotion != new Vector3(0,0,0)) {
+				Log.Info("RootMotion: " + playerModelAnim?.RootMotion);
+				
+				var initialPos = playerController.Position;
+				// player.Position += playerModelAnim.RootMotion.Normal * player.Rotation;
+				// playerController.Velocity = (playerModelAnim.RootMotion.Normal * player.Rotation).Distance(initialPos) * -Time.Delta;
+				// player.Position += Vector3.Forward * player.Rotation * 1.0f;
+				// player.Accelerate(Vector3.Forward * player.Rotation, 25, 55, 1.1f);
+				// player.WalkMove();
+				// player.Move();
+			}
+				// Owner.Velocity = 0;
+			if (playerModelAnim.CurrentSequence.Name == "CW_Sword_Attack_a_move" || playerModelAnim.CurrentSequence.Name == "CW_Sword_Attack_b_move") {
+			}
+		}
 	}
 
 	private void SwingTracer(float meleeSwingOffset, float swingMaxAngle, float swingCounterStep, float meleeAttackRange) {
@@ -97,37 +172,7 @@ partial class SwordLong : CitizenWarriorGame.BaseWeapon
 		}
 	}
 
-	private bool MeleeAttack() {
-		Log.Info("swingCounter " + swingCounter);
-		if (MeleeIsSwinging) {
-			return false;
-		}
-		_counterMaxValue = 150;
-		meleeSwingOffset = -120;
-		swingCounter = 0;
-		MeleeIsSwinging = true;
-		return true;
-	}
-
-	[ClientRpc]
-	private void OnMeleeMiss( bool leftHand )
-	{
-		Host.AssertClient();
-
-		ViewModelEntity?.SetAnimParameter( "attack_has_hit", false );
-		ViewModelEntity?.SetAnimParameter( "attack", true );
-		ViewModelEntity?.SetAnimParameter( "holdtype_attack", 3 );
-	}
-
-	[ClientRpc]
-	private void OnMeleeHit( bool leftHand )
-	{
-		Host.AssertClient();
-
-		ViewModelEntity?.SetAnimParameter( "attack_has_hit", true );
-		ViewModelEntity?.SetAnimParameter( "attack", true );
-		ViewModelEntity?.SetAnimParameter( "holdtype_attack", 3 );
-	}
+	
 
 	private void Activate()
 	{
@@ -167,5 +212,11 @@ partial class SwordLong : CitizenWarriorGame.BaseWeapon
 				Deactivate();
 			}
 		}
+	}
+
+	public enum SwordPoseStance
+	{
+		LeftStance,
+		RightStance
 	}
 }

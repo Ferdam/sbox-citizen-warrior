@@ -96,39 +96,6 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "CW_Sword_Idle_Alert_01"
-								children = 
-								[
-									{
-										_class = "AnimAddLayer"
-										anim_name = "CW_Sword_Idle_Alert_01_lower"
-									},
-									{
-										_class = "AnimSmoothLoop"
-										frames_from_start = 1
-										frames_from_end = 1
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = "Remove_Legs"
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
-								start_frame = 8
-								end_frame = 10
-								framerate = 1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
 								name = "CW_Sword_Idle_Alert_01_upper"
 								activity_name = ""
 								activity_weight = 1
@@ -302,21 +269,140 @@
 							},
 							{
 								_class = "AnimFrame"
-								name = "CW_Sword_Attack_a_pose"
+								name = "CW_Sword_Attack_a_finalpose"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = "Remove_Legs"
+								weight_list_name = ""
 								fade_in_time = 0.2
 								fade_out_time = 0.2
-								looping = false
+								looping = true
 								delta = false
 								worldSpace = false
 								hidden = false
 								anim_markup_ordered = false
 								disable_compression = false
-								src_anim_name = "CW_Sword_Combo_01"
-								frame_type = "Number"
-								frame = 28
+								src_anim_name = "CW_Sword_Attack_a_move"
+								frame_type = "LastFrame"
+								frame = 0
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Idle_Alert_01"
+								children = 
+								[
+									{
+										_class = "AnimAddLayer"
+										anim_name = "CW_Sword_Idle_Alert_01_lower"
+									},
+									{
+										_class = "AnimSmoothLoop"
+										frames_from_start = 1
+										frames_from_end = 1
+									},
+									{
+										_class = "ExtractMotion"
+										disabled = true
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = true
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Single"
+										motion_samples = [ 26 ]
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Remove_Legs"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 8
+								end_frame = 10
+								framerate = 1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Right_Stance_idle"
+								children = 
+								[
+									{
+										_class = "AnimOffset"
+										disabled = true
+										translation = [ -17.15, 0.0, 0.0 ]
+										rotation_xyz = [ 0.0, 0.0, 0.0 ]
+									},
+									{
+										_class = "ExtractMotion"
+										disabled = true
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = true
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Single"
+										motion_samples = [ 26 ]
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/anims/cw_sword_right_stance_idle.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 15.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Right_Stance_PelvisRoot"
+								children = 
+								[
+									{
+										_class = "AnimOffset"
+										disabled = true
+										translation = [ -17.15, 1.39, 0.0 ]
+										rotation_xyz = [ 0.0, 0.0, 0.0 ]
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Only_Pelvis"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = true
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/anims/cw_sword_right_stance_idle.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 15.0
+								take = 0
+								reverse = false
 							},
 							{
 								_class = "AnimFile"
@@ -350,23 +436,24 @@
 												traceradius = 3.0
 											},
 										]
+										disabled = true
 										locktolerance = 0.6
 										heighttolerance = 2.0
 										sanitizetrajectories = true
 									},
 									{
 										_class = "IKLock"
-										chain_name = "left_leg_IK"
+										chain_name = "left_leg_IK1"
 										start_frame = 23
-										tail_frame = 25
-										end_frame = 25
+										tail_frame = 39
+										end_frame = 39
 										create_footstep_anim_event = true
 										walktorunspeeddetermination = "Auto"
 										overridewalktorunspeed = -1.0
 									},
 									{
 										_class = "IKLock"
-										chain_name = "right_leg_IK"
+										chain_name = "right_leg_IK1"
 										start_frame = 0
 										tail_frame = 23
 										end_frame = 23
@@ -374,53 +461,435 @@
 										walktorunspeeddetermination = "Auto"
 										overridewalktorunspeed = -1.0
 									},
+									{
+										_class = "AnimAlign"
+										align_tx = true
+										align_ty = true
+										align_tz = false
+										align_rx = false
+										align_ry = false
+										align_rz = false
+										align_frame_type = "Number"
+										frame = 0
+										align_to_anim = "CW_Sword_Left_Stance_idle_nomove"
+										align_to_frame_type = "Number"
+										align_to_frame = 0
+										bone = "pelvis"
+									},
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Single"
+										motion_samples = [ 5, 26 ]
+									},
+									{
+										_class = "ExtractMotion"
+										disabled = true
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Specified"
+										motion_samples = [ 5, 26 ]
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
-								fade_in_time = 0.1
-								fade_out_time = 0.1
+								fade_in_time = 0.25
+								fade_out_time = 0.25
 								looping = false
 								delta = false
-								worldSpace = false
+								worldSpace = true
 								hidden = false
 								anim_markup_ordered = false
 								disable_compression = false
-								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								source_filename = "models/citizenwarrior/anims/cw_sword_attack_a.fbx"
 								start_frame = 9
-								end_frame = 34
+								end_frame = 48
 								framerate = -1.0
 								take = 0
 								reverse = false
 							},
 							{
 								_class = "AnimFile"
-								name = "CW_Sword_Attack_a_move_smooth"
+								name = "CW_Sword_Attack_b_move"
 								children = 
 								[
 									{
-										_class = "AnimSmoothLoop"
-										frames_from_start = 0
-										frames_from_end = 8
+										_class = "FootCycle Override"
+										children = 
+										[
+											{
+												_class = "Foot Cycle"
+												cyclestart = 10
+												heellift = 11
+												toelift = 13
+												heelland = 28
+												toeland = 25
+											},
+										]
+										disabled = true
+										footname = "Right"
+										locktolerance = 0.6
+										verticaltolerance = 2.0
+										sanitizetrajectories = false
+									},
+									{
+										_class = "AnimAlign"
+										align_tx = true
+										align_ty = true
+										align_tz = false
+										align_rx = false
+										align_ry = false
+										align_rz = false
+										align_frame_type = "Number"
+										frame = 0
+										align_to_anim = "CW_Sword_Right_Stance_idle_nomove"
+										align_to_frame_type = "Number"
+										align_to_frame = 0
+										bone = "pelvis"
+									},
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Single"
+										motion_samples = [ 10, 23 ]
+									},
+									{
+										_class = "ExtractMotion"
+										disabled = true
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Specified"
+										motion_samples = [ 10, 23 ]
 									},
 								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
-								fade_in_time = 0.1
-								fade_out_time = 0.1
+								fade_in_time = 0.25
+								fade_out_time = 0.25
 								looping = false
 								delta = false
-								worldSpace = false
+								worldSpace = true
 								hidden = false
 								anim_markup_ordered = false
 								disable_compression = false
 								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
-								start_frame = 9
-								end_frame = 34
+								start_frame = 37
+								end_frame = -1
 								framerate = -1.0
 								take = 0
 								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "CW_Sword_Attack_c_move"
+								children = 
+								[
+									{
+										_class = "FootCycle Override"
+										children = 
+										[
+											{
+												_class = "Foot Cycle"
+												cyclestart = 10
+												heellift = 11
+												toelift = 13
+												heelland = 28
+												toeland = 25
+											},
+										]
+										disabled = true
+										footname = "Right"
+										locktolerance = 0.6
+										verticaltolerance = 2.0
+										sanitizetrajectories = false
+									},
+									{
+										_class = "AnimAlign"
+										align_tx = true
+										align_ty = true
+										align_tz = false
+										align_rx = false
+										align_ry = false
+										align_rz = false
+										align_frame_type = "Number"
+										frame = 0
+										align_to_anim = "CW_Sword_Left_Stance_idle_nomove"
+										align_to_frame_type = "Number"
+										align_to_frame = 0
+										bone = "pelvis"
+									},
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Single"
+										motion_samples = [ 6, 19 ]
+									},
+									{
+										_class = "ExtractMotion"
+										disabled = true
+										extract_tx = true
+										extract_ty = false
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										root_bone_name = "pelvis"
+										motion_type = "Specified"
+										motion_samples = [ 6, 19 ]
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.25
+								fade_out_time = 0.25
+								looping = false
+								delta = false
+								worldSpace = true
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizenwarrior/cw_sword_combo_1.fbx"
+								start_frame = 36
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = true
+							},
+							{
+								_class = "Folder"
+								name = "No_Root_Move"
+								children = 
+								[
+									{
+										_class = "AnimFile"
+										name = "CW_Sword_Left_Stance_idle_nomove"
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 1
+												frames_from_end = 1
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizenwarrior/anims/cw_sword_attack_a_nomove.smd"
+										start_frame = 8
+										end_frame = 10
+										framerate = 1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "CW_Sword_Right_Stance_idle_nomove"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizenwarrior/anims/cw_sword_attack_a_nomove.smd"
+										start_frame = 48
+										end_frame = -1
+										framerate = 1.0
+										take = 0
+										reverse = false
+										anim_hold_list = 
+										[
+											{
+												frame = 48
+												frame_count = 2
+											},
+										]
+									},
+									{
+										_class = "AnimFile"
+										name = "CW_Sword_Attack_a_nomove"
+										children = 
+										[
+											{
+												_class = "Feet"
+												children = 
+												[
+													{
+														_class = "Foot"
+														name = "Left1"
+														anklebone = "ankle_L"
+														toebone = "ball_L"
+														balloffset = [ 0.0, 0.0, 0.0 ]
+														heeloffset = [ 0.0, 0.0, 0.0 ]
+														autolevel = true
+														traceheight = 5.0
+														traceradius = 3.0
+													},
+													{
+														_class = "Foot"
+														name = "Right1"
+														anklebone = "ankle_R"
+														toebone = "ball_R"
+														balloffset = [ 0.0, 0.0, 0.0 ]
+														heeloffset = [ 0.0, 0.0, 0.0 ]
+														autolevel = true
+														traceheight = 5.0
+														traceradius = 3.0
+													},
+												]
+												locktolerance = 0.6
+												heighttolerance = 2.0
+												sanitizetrajectories = true
+											},
+											{
+												_class = "IKLock"
+												chain_name = "left_leg_IK1"
+												start_frame = 23
+												tail_frame = 39
+												end_frame = 39
+												create_footstep_anim_event = true
+												walktorunspeeddetermination = "Auto"
+												overridewalktorunspeed = -1.0
+											},
+											{
+												_class = "IKLock"
+												chain_name = "right_leg_IK1"
+												start_frame = 0
+												tail_frame = 23
+												end_frame = 23
+												create_footstep_anim_event = false
+												walktorunspeeddetermination = "Auto"
+												overridewalktorunspeed = -1.0
+											},
+											{
+												_class = "ExtractMotion"
+												extract_tx = true
+												extract_ty = true
+												extract_tz = false
+												extract_rz = false
+												linear = false
+												quadratic = false
+												root_bone_name = "pelvis"
+												motion_type = "Single"
+												motion_samples = [ 26 ]
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizenwarrior/anims/cw_sword_attack_a_nomove.smd"
+										start_frame = 9
+										end_frame = 48
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "CW_Sword_Attack_b_nomove"
+										children = 
+										[
+											{
+												_class = "ExtractMotion"
+												extract_tx = true
+												extract_ty = true
+												extract_tz = false
+												extract_rz = false
+												linear = false
+												quadratic = false
+												root_bone_name = "pelvis"
+												motion_type = "Single"
+												motion_samples = [ 12, 25 ]
+											},
+											{
+												_class = "FootCycle Override"
+												children = 
+												[
+													{
+														_class = "Foot Cycle"
+														cyclestart = 10
+														heellift = 11
+														toelift = 13
+														heelland = 28
+														toeland = 25
+													},
+												]
+												footname = "Right"
+												locktolerance = 0.6
+												verticaltolerance = 2.0
+												sanitizetrajectories = false
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizenwarrior/anims/cw_sword_combo_1_nomove.smd"
+										start_frame = 36
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+								]
 							},
 						]
 					},
@@ -492,6 +961,17 @@
 						children = 
 						[
 							{
+								_class = "IKRigBiped"
+								name = "CW_IKRigBiped"
+								initial_master_blend_amount = 1.0
+								abs_origin_drop_height = 24.0
+								abs_origin_drop_height_spring_strength = 500.0
+								default_tilt_spring_strength = 5.0
+								tilt_bone = ""
+								animgraph_master_blend_parameter_name = ""
+								system = "IKSYSTEMTYPE_Animgraph"
+							},
+							{
 								_class = "IKChain"
 								name = "right_leg_IK1"
 								children = 
@@ -542,7 +1022,7 @@
 								}
 								"m_Data.m_EndEffectorFixedOffsetAttachment" = 
 								{
-									m_Name = ""
+									m_Name = "foot_R"
 								}
 								"m_Data.m_bParentJointRequiresAlignment" = true
 							},
@@ -597,7 +1077,7 @@
 								}
 								"m_Data.m_EndEffectorFixedOffsetAttachment" = 
 								{
-									m_Name = ""
+									m_Name = "foot_L"
 								}
 								"m_Data.m_bParentJointRequiresAlignment" = true
 							},
